@@ -1,0 +1,43 @@
+{
+  "name": "@uaaa/workspace",
+  "description": "UAAA Monorepo",
+  "packageManager": "yarn@3.4.1",
+  "license": "AGPL-3.0",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcpu-club/uaaa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lcpu-club/uaaa/issues"
+  },
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.13.0",
+    "@types/tap": "^15.0.8",
+    "c8": "^7.12.0",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.34.0",
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@swc/core": "^1.3.35"
+  },
+  "scripts": {
+    "ts:check": "cd $INIT_CWD && tsc --noEmit",
+    "ts:build": "cd $INIT_CWD && tsc",
+    "ts:clean": "cd $INIT_CWD && rimraf .tsbuildinfo lib",
+    "mocha:run": "cd $INIT_CWD && c8 mocha"
+  }
+}

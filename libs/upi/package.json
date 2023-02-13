@@ -1,0 +1,21 @@
+{
+  "name": "@uaaa/lib-upi",
+  "version": "0.0.0",
+  "packageManager": "yarn@3.4.1",
+  "type": "module",
+  "license": "AGPL-3.0",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcpu-club/uaaa.git",
+    "directory": "libs/upi"
+  },
+  "bugs": {
+    "url": "https://github.com/lcpu-club/uaaa/issues"
+  },
+  "scripts": {
+    "type-check": "run ts:check",
+    "build": "run ts:build",
+    "test": "run mocha:run"
+  }
+}

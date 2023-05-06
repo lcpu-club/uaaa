@@ -1,1 +1,3 @@
-# server
+# UAAA Server
+
+> `@uaaa/server`

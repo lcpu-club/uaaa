@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/workspaces:cached
+
+    command: sleep infinity
+
+  db:
+    image: mongo:latest
+    restart: unless-stopped
+    volumes:
+      - mongodb-data:/data/db
+
+  redis:
+    image: redis:latest
+    restart: unless-stopped
+    command: redis-server --save "" --appendonly no
+    ports:
+      - '6379'
+
+volumes:
+  mongodb-data:

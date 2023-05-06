@@ -16,6 +16,31 @@
   "scripts": {
     "type-check": "run ts:check",
     "build": "run ts:build",
-    "test": "run mocha:run"
+    "test": "run mocha:run",
+    "cli": "node -r dotenv/config lib/cli.js"
+  },
+  "devDependencies": {
+    "@fastify/swagger": "^8.3.1",
+    "@fastify/swagger-ui": "^1.8.1",
+    "@types/bcrypt": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/yargs": "^17.0.24",
+    "dotenv": "^16.0.3"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.2.0",
+    "@fastify/rate-limit": "^7.6.0",
+    "@fastify/sensible": "^5.2.0",
+    "@fastify/type-provider-typebox": "^2.4.0",
+    "@sinclair/typebox": "^0.25.21",
+    "@uaaa/lib-upi": "workspace:^",
+    "bcrypt": "^5.1.0",
+    "fastify": "^4.13.0",
+    "fastify-plugin": "^4.5.0",
+    "ioredis": "^5.3.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.4.0",
+    "pino": "^8.10.0",
+    "yargs": "^17.7.2"
   }
 }

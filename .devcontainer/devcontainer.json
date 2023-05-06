@@ -1,0 +1,30 @@
+{
+  "name": "UAAA",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  // "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mongodb.mongodb-vscode",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "VisualStudioExptTeam.intellicode-api-usage-examples",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "voorjaar.windicss-intellisense",
+        "Vue.volar",
+        "wix.vscode-import-cost",
+        "GitHub.copilot",
+        "cweijan.vscode-redis-client",
+        "oouo-diogo-perdigao.docthis"
+      ]
+    }
+  },
+  "postCreateCommand": [
+    "bash",
+    "-i",
+    "-c",
+    "nvm install && nvm use && corepack enable && yarn config set --home enableTelemetry 0 && yarn install"
+  ]
+}

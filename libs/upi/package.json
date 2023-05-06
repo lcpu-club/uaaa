@@ -17,5 +17,8 @@
     "type-check": "run ts:check",
     "build": "run ts:build",
     "test": "run mocha:run"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
